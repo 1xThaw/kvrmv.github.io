@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kvrmv - Blog de Ciberseguridad</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212; /* Fondo oscuro */
+            color: #e0e0e0; /* Texto claro */
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            margin: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        header {
+            background-color: #1f1f1f; /* Fondo oscuro */
+            color: #e0e0e0; /* Texto claro */
+            padding: 20px 0;
+            text-align: center;
+            border-bottom: 2px solid #e74c3c; /* Línea roja */
+        }
+
+        header h1 {
+            font-size: 36px;
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            color: #e0e0e0; /* Texto claro */
+            font-weight: 400;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #e74c3c; /* Rojo al pasar el mouse */
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://via.placeholder.com/1200x400') no-repeat center center/cover;
+            color: #e0e0e0; /* Texto claro */
+            padding: 150px 0;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 48px;
+            margin: 0;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin: 20px 0;
+        }
+
+        .hero .btn {
+            background-color: #e74c3c; /* Rojo */
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .hero .btn:hover {
+            background-color: #c0392b; /* Rojo oscuro */
+        }
+
+        /* Blog Section */
+        .blog {
+            padding: 50px 0;
+            background-color: #1f1f1f; /* Fondo oscuro */
+        }
+
+        .blog h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 40px;
+            color: #e0e0e0; /* Texto claro */
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color: #2c3e50; /* Azul oscuro */
+            border: 1px solid #34495e; /* Borde azul más claro */
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .card h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #e0e0e0; /* Texto claro */
+        }
+
+        .card p {
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: #bdc3c7; /* Texto gris claro */
+        }
+
+        .card .btn {
+            background-color: #e74c3c; /* Rojo */
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .card .btn:hover {
+            background-color: #c0392b; /* Rojo oscuro */
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1f1f1f; /* Fondo oscuro */
+            color: #e0e0e0; /* Texto claro */
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+            border-top: 2px solid #e74c3c; /* Línea roja */
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1>Kvrmv</h1>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#bug-bounty">Bug Bounty</a></li>
+                    <li><a href="#noticias">Noticias</a></li>
+                    <li><a href="#herramientas">Herramientas</a></li>
+                    <li><a href="#writeups">Writeups</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sección de Inicio -->
+    <section id="inicio" class="hero">
+        <div class="container">
+            <h2>Hola, soy Kvrmv</h2>
+            <p>Un apasionado de la ciberseguridad. Aquí comparto mis experiencias, hallazgos y recursos sobre Bug Bounty, herramientas, noticias y writeups.</p>
+            <a href="#blog" class="btn">Explora mi blog</a>
+        </div>
+    </section>
+
+    <!-- Sección del Blog -->
+    <section id="blog" class="blog">
+        <div class="container">
+            <h2>Explora mi contenido</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Bug Bounty</h3>
+                    <p>Descubre mis experiencias y consejos en programas de Bug Bounty.</p>
+                    <a href="#bug-bounty" class="btn">Leer más</a>
+                </div>
+                <div class="card">
+                    <h3>Noticias</h3>
+                    <p>Mantente al día con las últimas noticias de ciberseguridad.</p>
+                    <a href="#noticias" class="btn">Leer más</a>
+                </div>
+                <div class="card">
+                    <h3>Herramientas</h3>
+                    <p>Herramientas útiles para pentesting y ciberseguridad.</p>
+                    <a href="#herramientas" class="btn">Leer más</a>
+                </div>
+                <div class="card">
+                    <h3>Writeups</h3>
+                    <p>Writeups detallados de máquinas y desafíos.</p>
+                    <a href="#writeups" class="btn">Leer más</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Kvrmv. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
